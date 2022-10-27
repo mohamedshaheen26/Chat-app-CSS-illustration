@@ -237,6 +237,12 @@ main .intro-text {
   width: 37%;
 }
 
+main .intro-text h1 {
+  color: var(--main-heading-color);
+  font-size: 30px;
+  font-weight: 500;
+}
+
 main .intro-text p {
   line-height: 1.6;
   color: var(--main-p-color);
