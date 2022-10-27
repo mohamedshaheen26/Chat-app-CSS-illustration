@@ -1,0 +1,243 @@
+:root {
+  --pale-Violet: hsl(276, 100%, 81%);
+  --Moderate-Violet: hsl(276, 55%, 52%);
+  --desaturated-Dark-Violet: hsl(271, 15%, 43%);
+  --main-placeholder: hsl(206, 6%, 79%);
+  --main-heading-color: hsl(271, 36%, 24%);
+  --main-p-color: hsl(270, 7%, 64%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background: hsl(270, 20%, 96%);
+}
+
+main {
+  padding: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+
+main::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: -160px;
+  z-index: -110;
+  background: linear-gradient(to top, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+  width: 35%;
+  height: 100%;
+  border-radius: 0 0 400px 300px;
+}
+
+main::after {
+  content: "";
+  position: absolute;
+  bottom: -120px;
+  right: -250px;
+  z-index: -100;
+  background: #eee;
+  width: 40%;
+  height: 100%;
+  border-radius: 300px 300px 0 0;
+}
+
+main .chat {
+  width: 320px;
+  border-radius: 25px;
+  border: 10px solid white;
+  background: #f6f6f6;
+  box-shadow: 10px 10px 60px #ddd;
+}
+
+main .chat .head {
+  background: linear-gradient(
+    to right,
+    hsl(264, 100%, 61%),
+    hsl(293, 100%, 63%)
+  );
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 20px 15px;
+  border-radius: 25px 25px 0 0;
+  position: relative;
+}
+
+main .chat .head::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 25px;
+  background: white;
+  border-radius: 20px;
+}
+
+main .chat .head .title {
+  display: flex;
+  align-items: center;
+}
+
+main .chat .head .title .back {
+  color: white;
+  font-size: 12px;
+  margin-right: 7px;
+}
+
+main .chat .head .title img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+main .chat .head .title div {
+  margin-left: 10px;
+}
+
+main .chat .head .title div p {
+  margin: 0;
+  color: white;
+  font-size: 13px;
+}
+
+main .chat .head .title div span {
+  color: var(--main-placeholder);
+  font-size: 9px;
+}
+
+main .chat .head .option {
+  color: white;
+  font-size: 11px;
+}
+
+main .body {
+  display: flex;
+  flex-direction: column;
+}
+
+main .body .sender {
+  font-size: 13px;
+  width: 200px;
+  background: white;
+  padding: 10px;
+  margin-left: 10px;
+  margin-bottom: 0;
+  border-radius: 15px 15px 15px 0;
+  color: var(--Moderate-Violet);
+}
+
+main .body .receiver {
+  font-size: 13px;
+  align-self: flex-end;
+  width: 200px;
+  background: white;
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 0;
+  margin-top: 10px;
+  border-radius: 15px 15px 0 15px;
+  color: var(--desaturated-Dark-Violet);
+  box-shadow: 0 10px 15px #eee;
+}
+
+main .body .img {
+  text-align: right;
+  margin: 20px 10px 0;
+}
+
+main .body img {
+  width: 45px;
+  margin-left: 7px;
+  height: 45px;
+  border-radius: 10px;
+}
+
+main .body .special-msg {
+  background: linear-gradient(
+    to left,
+    hsl(264, 100%, 61%),
+    hsl(293, 100%, 63%)
+  );
+  width: 240px;
+  padding: 15px;
+  padding-left: 35px;
+  border-radius: 15px 15px 15px 0;
+  margin-left: 10px;
+  margin-top: 15px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--main-placeholder);
+  position: relative;
+}
+
+main .body .special-msg::before {
+  content: "";
+  position: absolute;
+  border: 1px dashed var(--main-placeholder);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  left: 12px;
+}
+
+main .body .special-msg span {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+main .foot {
+  position: relative;
+  margin-top: 15px;
+}
+
+main .foot input {
+  width: 280px;
+  margin: 10px;
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  outline-color: hsl(289, 100%, 72%);
+}
+
+input::placeholder {
+  padding-left: 10px;
+  color: hsl(206, 6%, 79%);
+}
+
+main .foot i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  background: hsl(271, 36%, 24%);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+main .intro-text {
+  width: 37%;
+}
+
+main .intro-text p {
+  line-height: 1.6;
+  color: var(--main-p-color);
+}
