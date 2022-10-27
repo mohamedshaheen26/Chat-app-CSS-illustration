@@ -24,6 +24,13 @@ main {
   position: relative;
 }
 
+@media (max-width:768px) {
+  main {
+    flex-direction: column;
+    padding: 10px;
+  }
+}
+
 main::before {
   content: "";
   position: absolute;
@@ -46,6 +53,19 @@ main::after {
   width: 40%;
   height: 100%;
   border-radius: 300px 300px 0 0;
+}
+
+@media (max-width:768px) {
+  main {
+    flex-direction: column;
+  }
+  main::before {
+    left: -10px;
+    top: -400px;
+  }
+  main::after {
+    display: none;
+  }
 }
 
 main .chat {
@@ -235,6 +255,14 @@ main .foot i {
 
 main .intro-text {
   width: 37%;
+}
+
+@media (max-width:768px) {
+  main .intro-text {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
 }
 
 main .intro-text h1 {
